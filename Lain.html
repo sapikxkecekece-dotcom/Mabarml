@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajak Mabar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+    h2 {
+      color: #333;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .yes {
+      background: #4caf50;
+      color: white;
+    }
+    .yes:hover {
+      background: #45a049;
+    }
+    .no {
+      background: #f44336;
+      color: white;
+    }
+    .no:hover {
+      background: #d32f2f;
+    }
+    #jawaban {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Mau mabar nggak? 🎮</h2>
+    <button class="yes" onclick="jawab('Yes')">Iya, Gas!</button>
+    <button class="no" onclick="jawab('No')">Nggak dulu</button>
+    <p id="jawaban"></p>
+  </div>
+
+  <script>
+    function jawab(pilihan) {
+      let pesan = "";
+      if (pilihan === "Yes") {
+        pesan = "Mantap! Gaskeun mabar 🔥🔥 wa heula";
+      } else {
+        pesan = "Yaudah, next time aja 😅";
+      }
+      document.getElementById("jawaban").innerText = pesan;
+    }
+  </script>
+
+</body>
+</html>
